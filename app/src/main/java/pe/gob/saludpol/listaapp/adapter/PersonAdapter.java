@@ -53,7 +53,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         public PersonViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
+            imgFoto = (ImageView) itemView.findViewById(R.id.imgPhoto);
             txtNombre = (TextView) itemView.findViewById(R.id.txtNombre);
             txtDNI = (TextView) itemView.findViewById(R.id.txtDni);
             txtEdad = (TextView) itemView.findViewById(R.id.txtEdad);
