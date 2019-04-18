@@ -11,7 +11,11 @@ import pe.gob.saludpol.listaapp.model.Person;
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonViewHolder> {
 
     private List<Person> lista;
-    
+
+    public PersonAdapter(List<Person> lista) {
+        this.lista = lista;
+    }
+
     @NonNull
     @Override
     public PersonAdapter.PersonViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
