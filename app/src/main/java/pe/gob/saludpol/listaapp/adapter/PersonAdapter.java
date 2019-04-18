@@ -3,6 +3,7 @@ package pe.gob.saludpol.listaapp.adapter;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -24,11 +25,16 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
     @NonNull
     @Override
     public PersonAdapter.PersonViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        return null;
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.person_card, viewGroup, false);
+        return new PersonViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull PersonAdapter.PersonViewHolder personViewHolder, int i) {
+        personViewHolder.txtNombre.setText(lista.get(i).getNombre());
+        personViewHolder.txtDNI.setText(lista.get(i).getDni());
+        personViewHolder.txtEdad.setText(String.valueOf(lista.get(i).getEdad()));
+        personViewHolder.imgFoto.setImageResource(lista.get(i).getIdfoto());
 
     }
 
