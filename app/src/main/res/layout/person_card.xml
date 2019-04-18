@@ -38,6 +38,17 @@
             android:layout_margin="5dp"
             android:textSize="18dp"
             android:id="@+id/txtDni"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad: "
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:textSize="18dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -46,6 +57,7 @@
             android:layout_margin="5dp"
             android:textSize="18dp"
             android:id="@+id/txtEdad"/>
+        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>

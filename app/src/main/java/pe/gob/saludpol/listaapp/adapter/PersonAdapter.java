@@ -31,8 +31,8 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
 
     @Override
     public void onBindViewHolder(@NonNull PersonAdapter.PersonViewHolder personViewHolder, int i) {
-        personViewHolder.txtNombre.setText(lista.get(i).getNombre());
-        personViewHolder.txtDNI.setText(lista.get(i).getDni());
+        personViewHolder.txtNombre.setText("Nombre: "+lista.get(i).getNombre());
+        personViewHolder.txtDNI.setText("DNI: "+lista.get(i).getDni());
         personViewHolder.txtEdad.setText(String.valueOf(lista.get(i).getEdad()));
         personViewHolder.imgFoto.setImageResource(lista.get(i).getIdfoto());
 
