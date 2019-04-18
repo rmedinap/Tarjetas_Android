@@ -2,6 +2,7 @@ package pe.gob.saludpol.listaapp.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
@@ -29,6 +30,13 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lista.size();
+    }
+
+    public class PersonViewHolder extends RecyclerView.ViewHolder {
+
+        public PersonViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
     }
 }
