@@ -1,4 +1,4 @@
-package pe.gob.saludpol.listaapp;
+package pe.gob.saludpol.listahttp;
 
 import org.junit.Test;
 

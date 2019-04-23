@@ -1,4 +1,4 @@
-package pe.gob.saludpol.listaapp.adapter;
+package pe.gob.saludpol.listahttp.adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import pe.gob.saludpol.listaapp.R;
-import pe.gob.saludpol.listaapp.model.Person;
+import pe.gob.saludpol.listahttp.R;
+import pe.gob.saludpol.listahttp.model.Person;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonViewHolder> {
 

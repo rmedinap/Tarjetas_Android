@@ -1,4 +1,4 @@
-package pe.gob.saludpol.listaapp.model;
+package pe.gob.saludpol.listahttp.model;
 
 public class Person {
     private String nombre;
