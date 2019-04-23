@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import pe.gob.saludpol.listahttp.R;
@@ -34,7 +36,12 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.PersonView
         personViewHolder.txtNombre.setText("Nombre: "+lista.get(i).getNombre());
         personViewHolder.txtDNI.setText("DNI: "+lista.get(i).getDni());
         personViewHolder.txtEdad.setText(String.valueOf(lista.get(i).getEdad()));
-        personViewHolder.imgFoto.setImageResource(lista.get(i).getIdfoto());
+        //personViewHolder.imgFoto.setImageResource(lista.get(i).getIdfoto());
+
+        //Utilizando libreria para mostrar foto
+        Picasso.with(personViewHolder.imgFoto.getContext())
+                .load(lista.get(i).getFotourl())
+                .into(personViewHolder.imgFoto);
 
     }
 
