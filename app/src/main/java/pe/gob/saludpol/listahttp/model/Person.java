@@ -6,6 +6,8 @@ public class Person {
     private int edad;
     private String biografia;
     private int idfoto;
+    private String fotourl;
+    private String codigo;
 
     public Person(String nombre, String dni, int edad, String biografia, int idfoto) {
         this.nombre = nombre;
@@ -53,5 +55,21 @@ public class Person {
 
     public void setIdfoto(int idfoto) {
         this.idfoto = idfoto;
+    }
+
+    public String getFotourl() {
+        return fotourl;
+    }
+
+    public void setFotourl(String fotourl) {
+        this.fotourl = fotourl;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 }
