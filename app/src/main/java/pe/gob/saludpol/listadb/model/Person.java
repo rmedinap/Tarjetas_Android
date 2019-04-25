@@ -58,6 +58,14 @@ public class Person {
         this.id = id;
     }
 
+    public Person(String nombre, String dni, int edad, String biografia, int idfoto) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+        this.biografia = biografia;
+        this.idfoto = idfoto;
+    }
+
     public Person(String nombre, String dni, int edad, String biografia, int idfoto, int id) {
         this.nombre = nombre;
         this.dni = dni;
