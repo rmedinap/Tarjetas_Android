@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         lista = new ArrayList<>();
         FillPerson();
 
-        btnAgregar = (FloatingActionButton)findViewById(R.id.btnGuardar);
+        btnAgregar = (FloatingActionButton)findViewById(R.id.btnAgregar);
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
