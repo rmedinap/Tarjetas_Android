@@ -1,19 +1,14 @@
 package pe.gob.saludpol.listadb.model;
 
+import android.content.ContentValues;
+
 public class Person {
     private String nombre;
     private String dni;
     private int edad;
     private String biografia;
     private int idfoto;
-
-    public Person(String nombre, String dni, int edad, String biografia, int idfoto) {
-        this.nombre = nombre;
-        this.dni = dni;
-        this.edad = edad;
-        this.biografia = biografia;
-        this.idfoto = idfoto;
-    }
+    private int id;
 
     public String getNombre() {
         return nombre;
@@ -53,5 +48,32 @@ public class Person {
 
     public void setIdfoto(int idfoto) {
         this.idfoto = idfoto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Person(String nombre, String dni, int edad, String biografia, int idfoto, int id) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+        this.biografia = biografia;
+        this.idfoto = idfoto;
+        this.id = id;
+    }
+
+    public ContentValues toContentValues(){
+        ContentValues values = new ContentValues();
+        values.put("nombre", this.getNombre());
+        values.put("dni", this.getDni());
+        values.put("edad", this.getEdad());
+        values.put("biografia", this.getBiografia());
+        values.put("idfoto", this.getIdfoto());
+        return values;
     }
 }
