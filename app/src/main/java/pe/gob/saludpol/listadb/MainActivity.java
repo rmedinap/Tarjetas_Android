@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pe.gob.saludpol.listadb.adapter.PersonAdapter;
+import pe.gob.saludpol.listadb.database.CustomersDBHelper;
 import pe.gob.saludpol.listadb.model.Person;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,11 +42,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void FillPerson() {
-        lista.add(new Person("Juan Perez", "10405857", 22,"Ingeniero de Sistema, con 5 años de experiencia", R.drawable.face02));
-        lista.add(new Person("Anita Lavado", "34125857", 53,"Administradora de empresas, con 25 años de experiencia", R.drawable.face03));
-        lista.add(new Person("Benito Muñoz", "48675857", 32,"M{usico profesional, con especialidad en musica barroca", R.drawable.face04));
-        lista.add(new Person("Otto Orosco", "34643576", 52,"M{usico profesional, con especialidad en musica barroca", R.drawable.face07));
-
+        CustomersDBHelper db = new CustomersDBHelper(this);
+        lista = db.getClientes();
     }
 
 }
