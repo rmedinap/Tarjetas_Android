@@ -1,9 +1,12 @@
 package pe.gob.saludpol.listadb;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView reciclador;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
+    private FloatingActionButton btnAgregar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         //Creando la lista de elementos para mostrar en el RecyclerView
         lista = new ArrayList<>();
         FillPerson();
+
+        btnAgregar = (FloatingActionButton)findViewById(R.id.btnGuardar);
+        btnAgregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NuevoCliente();
+            }
+        });
 
         //Asignamos la variable reciclador
         reciclador = findViewById(R.id.reciclador);
@@ -39,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         //Asignando el adaptador al RecycleView
         adapter = new PersonAdapter(lista);
         reciclador.setAdapter(adapter);
+    }
+
+    private void NuevoCliente() {
+        Intent act = new Intent(this, NewActivity.class);
+        startActivity(act);
     }
 
     private void FillPerson() {
